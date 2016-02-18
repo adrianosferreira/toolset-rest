@@ -1,6 +1,6 @@
 #Toolset Rest
 
-Toolset REST lets you integrate Toolset components with WP REST API features.
+Toolset REST is a WordPress plugin that lets you integrate Toolset components with WP REST API features.
 
 ##Toolset Views
 
