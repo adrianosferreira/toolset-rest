@@ -22,18 +22,18 @@ function toolset_rest_activation(){
 
 	if (class_exists('WP_Views')) {
 		if (class_exists('WP_REST_Controller') ||
-			version_compare($wp_version, "4.4", ">=")){
+			version_compare($wp_version, "4.4", ">=")) {
 			$do_load = true;
-		}else{
+		} else {
 			add_action( 'admin_init', 'toolset_rest_deactivate' );
 			add_action( 'admin_notices', 'toolset_rest_deactivate_wp_notice');	
 		}
-	}else{
+	} else {
 		add_action( 'admin_init', 'toolset_rest_deactivate' );
 		add_action( 'admin_notices', 'toolset_rest_deactivate_views_notice');
 	}
 
-	if ($do_load){
+	if ($do_load) {
 		define( 'TOOLSET_REST_VERSION', '1.0' );
 		define( 'TOOLSET_REST_INC_PATH', dirname( __FILE__ ) . '/includes' );
 		define( 'TOOLSET_REST_PATH', dirname( __FILE__ ) );

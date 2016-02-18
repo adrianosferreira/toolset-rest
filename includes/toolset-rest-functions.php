@@ -2,7 +2,7 @@
 	
 class Toolset_Rest extends WP_REST_Request {
 	function __construct() {
-		add_action( 'init', array( $this, 'init') );
+		add_action( 'init', array( $this, 'init' ) );
 	}
 
 	function init(){
@@ -21,7 +21,6 @@ class Toolset_Rest extends WP_REST_Request {
 		if( null !== $request->get_param( 'id' )){
 			$request_param_id = $request->get_param( 'id' );
 			$view = get_post( $request_param_id );
-
 			if( $view != null ){
 				$view_id = $view->ID;
 			}else{
@@ -29,12 +28,11 @@ class Toolset_Rest extends WP_REST_Request {
 				$wpdb->posts WHERE post_name = %s", $request_param_id ) );
 				$view_id = $view_by_name->ID;
 			}
-
 		}
 
 		//Handling the GET parameters to fit into the View $args
-		if($request->params['GET'] &&
-		   !empty($request->params['GET'])){
+		if ($request->params['GET'] &&
+		   !empty( $request->params['GET'] )){
 			$get_params = $request->params['GET'];
 			foreach ($get_params as $key => $value) {
 				$args[$key] = $value;
