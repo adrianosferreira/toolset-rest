@@ -1,8 +1,8 @@
-#Toolset Rest
+Toolset Rest
 
 Toolset REST is a WordPress plugin that lets you integrate Toolset components with WP REST API features.
 
-##Toolset Views
+Toolset Views
 
 Check the custom endpoint created for the View by the URL:
 
@@ -23,3 +23,15 @@ function my_function_test($query_args, $view_settings, $view_id){
 You can also pass URL parameters and they will be handled as shortcode attributes by the View:
 
 http://www.yoursite.com/wp-json/toolset-views/v2/my_view_slug?ids=123
+
+NEW REST ROUTES PLUGIN
+
+I've just wanted to let you know that I've launched quite some time ago a plugin for building custom routes for WP Rest API. It is free and is in the WP repository: https://wordpress.org/plugins/rest-routes/
+
+Also, I've developed a much more improved Pro version. You can find all the details in:
+http://restroutes.com/
+http://restroutes.com/pricing/
+
+A little of what you can do with the Pro version:
+https://www.youtube.com/watch?v=amfbMOr-jVE
+https://www.youtube.com/watch?v=HUa-AOvh998
